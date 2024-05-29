@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Главная{% endblock %}
+{% block content %}
+<div class="main-content">
+    <h1>Кафедра информационных систем и технологий</h1>
+    <p>Кафедра основана в 1997 году на факультете информационных систем и технологий...</p>
+</div>
+<div class="sidebar">
+    <div class="login-form">
+        <form action="/login" method="post">
+            <label for="phone">Телефон</label>
+            <input type="text" id="phone" name="phone" placeholder="Введите телефон">
+            <label for="password">Пароль</label>
+            <input type="password" id="password" name="password" placeholder="Введите пароль">
+            <input type="submit" value="Войти">
+        </form>
+    </div>
+</div>
+{% endblock %}

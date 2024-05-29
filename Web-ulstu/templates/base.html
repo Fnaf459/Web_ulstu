@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/png">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="{{ url_for('index') }}">Главная</a>
+                <a href="{{ url_for('news') }}">Новости</a>
+                <a href="{{ url_for('programs') }}">Направления</a>
+            </nav>
+        </div>
+    </header>
+    <div class="container content">
+        {% block content %}{% endblock %}
+    </div>
+    <footer>
+        <div class="container">
+            © 2024 Кафедра информационных систем и технологий. Автор: Савенков Александр Владимирович ПИбд-42.
+        </div>
+    </footer>
+</body>
+</html>
